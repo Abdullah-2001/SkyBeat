@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+        integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+    <title>Music Player</title>
+</head>
+
+<body>
+
+    <div class="container card_container">
+
+        <div class="row d-flex justify-content-center">
+
+            <div class="card" id="card">
+
+                <img class="card_cover" src="Images/mockup.png" alt="img"></img>
+
+                <div class="middle" id="musicBeat">
+                    <div class="bar bar1"></div>
+                    <div class="bar bar2"></div>
+                    <div class="bar bar3"></div>
+                    <div class="bar bar4"></div>
+                    <div class="bar bar5"></div>
+                    <div class="bar bar6"></div>
+                    <div class="bar bar7"></div>
+                    <div class="bar bar8"></div>
+                </div>
+
+                <div class="time-container">
+                    <p class="time">6:05</p>
+                </div>
+
+                <div class="status-container">
+                    <i class="fas fa-signal"></i>
+                    <i class="fas fa-wifi"></i>
+                    <i class="fas fa-battery-full"></i>
+                </div>
+
+                <div class="image-div">
+                    <img id="musicBg" width="220" height="320" style="object-fit: cover;" alt="" class="music-img">
+                </div>
+
+                <div class="artist-song-container" id="name-artist">
+                    <p class="name" id="name"></p>
+                    <p class="artist" id="artist"></p>
+                </div>
+
+                <div class="music-div">
+                    <audio type="" src=""></audio>
+                </div>
+
+                <i style="cursor: pointer;" id="muteButton" onclick="mute()" class="fas fa-volume-up"></i>
+
+                <input class="duration-range form-range" type="range" min="0" max="100" value="0"
+                    onchange="change_duration()">
+
+                <div class="duration-number-container">
+                    <p id="current-time">0:00</p>
+                    <p id="duration">0:00</p>
+                </div>
+
+                <div class="play-next-prev" id="span">
+                    <span style="cursor: pointer;" id="stopButton" onclick="shuffleSong()" class="fas fa-random"></span>
+                    <span style="cursor: pointer;" onclick="prevSong()" class="fas fa-backward"></span>
+                    <span style="cursor: pointer;" onclick="playSong()" id="playButton"
+                        class="fas fa-play-circle"></span>
+                    <span style="cursor: pointer;" onclick="nextSong()" class="fas fa-forward"></span>
+                    <span style="cursor: pointer;" onclick="repeat()" id="repeat" class="fas fa-redo-alt"></span>
+                </div>
+
+                <!-- <h3 id="percentage">%</h3> -->
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <script src="app.js"></script>
+
+</body>
+
+</html>

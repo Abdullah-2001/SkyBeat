@@ -1,0 +1,272 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+body {
+    font-family: 'poppins', sans-serif !important;
+    background-color: rgb(75, 73, 73) !important;
+}
+
+.card_cover {
+    z-index: -1;
+    position: absolute;
+    height: 101%;
+    width: 25rem;
+}
+
+.image-div {
+    padding-top: 30px;
+}
+
+.time-container {
+    font-weight: 500;
+    color: white;
+    margin-top: 30px;
+    margin-bottom: 0;
+    margin-left: -255px;
+}
+
+.status-container {
+    margin-left: 250px;
+    margin-top: -40px;
+}
+
+.status-container i {
+    font-size: 14px;
+    color: white;
+}
+
+.card {
+    z-index: 0;
+    background: linear-gradient(to top, #1a1a1a, #497bca);
+    width: 24rem !important;
+    border: none !important;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50px !important;
+}
+
+.music-img {
+    box-shadow: 0 6px 20px 0 rgba(68, 68, 68, 0.507);
+    border-radius: 10px;
+}
+
+.artist-song-container {
+    text-align: center;
+    padding: 40px 0 0 0;
+}
+
+.name {
+    margin-bottom: 0;
+    font-weight: 500;
+    font-size: 28px;
+    color: rgb(255, 255, 255);
+}
+
+.artist {
+    font-weight: 400;
+    font-size: 20px;
+    color: rgb(255, 255, 255);
+}
+
+.duration-number-container {
+    display: flex;
+    justify-content: center;
+}
+
+.duration-number-container p {
+    padding: 0 117px;
+    color: rgb(255, 255, 255);
+    font-weight: 500;
+}
+
+.duration-range {
+    width: 300px !important;
+}
+
+.play-next-prev {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 0 30px 0;
+}
+
+#playButton {
+    color: rgb(224, 165, 3);
+    font-size: 60px;
+    cursor: pointer;
+}
+
+.play-next-prev span {
+    padding: 0 14px;
+    margin-bottom: 15px;
+    font-size: 25px;
+    color: rgb(255, 255, 255);
+}
+
+#muteButton {
+    margin-left: 280px;
+    font-size: 25px;
+    color: rgb(255, 255, 255);
+}
+
+input[type=range] {
+    width: 100%;
+    margin: 10px 0;
+    background-color: transparent;
+}
+
+input[type=range]::-webkit-slider-runnable-track {
+    background: white;
+    border-radius: 1.3px;
+    width: 100%;
+    height: 2px;
+    cursor: pointer;
+    border: none;
+}
+
+input[type=range]::-webkit-slider-thumb {
+    margin-top: -7px;
+    width: 16px;
+    height: 16px;
+    background: white;
+    border: none;
+    border-radius: 15px;
+    cursor: pointer;
+}
+
+.slider {
+    -webkit-appearance: none;
+    width: 100%;
+    height: 15px;
+    border-radius: 5px;
+    background: #d3d3d3;
+    outline: none;
+    opacity: 0.7;
+    -webkit-transition: .2s;
+    transition: opacity .2s;
+}
+
+.slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    background: #04AA6D;
+    cursor: pointer;
+}
+
+.slider::-moz-range-thumb {
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    background: #04AA6D;
+    cursor: pointer;
+}
+
+/* music beat animation */
+
+.middle {
+    display: none;
+    top: 72.5%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    position: absolute;
+}
+
+.bar {
+    width: 3px;
+    height: 20px;
+    background: rgb(14, 255, 94);
+    display: inline-block;
+    transform-origin: bottom center;
+    border-radius: 50px;
+    animation: loader 1.2s linear infinite;
+}
+
+.bar1 {
+    animation-delay: 0.1s;
+}
+
+.bar2 {
+    animation-delay: 0.2s;
+}
+
+.bar3 {
+    animation-delay: 0.3s;
+}
+
+.bar4 {
+    animation-delay: 0.4s;
+}
+
+.bar5 {
+    animation-delay: 0.5s;
+}
+
+.bar6 {
+    animation-delay: 0.6s;
+}
+
+.bar7 {
+    animation-delay: 0.7s;
+}
+
+.bar8 {
+    animation-delay: 0.8s;
+}
+
+@keyframes loader {
+    0% {
+        transform: scaleY(0.1);
+        background: rgb(14, 255, 94);
+    }
+    50% {
+        transform: scaleY(1);
+        background: rgb(14, 255, 94);
+    }
+    100% {
+        transform: scaleY(0.1);
+        background: rgb(14, 255, 94);
+    }
+}
+
+@media only screen and (max-width:570px) {
+    #playButton {
+        font-size: 50px;
+    }
+    .duration-number-container p {
+        padding: 0 70px;
+        color: rgb(116, 116, 116);
+    }
+    .duration-range {
+        width: 200px !important;
+        background-color: teal;
+    }
+    .play-next-prev span {
+        padding: 0 10px;
+        font-size: 25px;
+    }
+    #muteButton {
+        margin-left: 180px;
+    }
+    .card {
+        width: 23rem !important;
+    }
+    .middle {
+        top: 74%;
+    }
+}
+
+.dark-theme {
+    transition: 1s;
+    background-color: rgb(27, 27, 27) !important;
+}
+
+.dark-icons span {
+    color: white;
+}
+
+.dark-name p {
+    color: white;
+}
